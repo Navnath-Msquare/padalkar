@@ -118,7 +118,7 @@ const SplashScreen: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
               transition={{ delay: 1, duration: 1 }}
               className="mt-8 flex flex-col items-center gap-2"
             >
-              <span className="text-primary text-lg tracking-[0.4em] font-extrabold uppercase mt-4">
+              <span className="text-primary text-lg font-extrabold uppercase mt-4">
                 शुद्धता आणि विश्वासाचे प्रतीक
               </span>
               <div className="flex gap-1.5 mt-2">
