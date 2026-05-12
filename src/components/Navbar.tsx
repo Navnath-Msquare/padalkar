@@ -93,8 +93,13 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-50 shadow-2xl flex flex-col lg:hidden pt-24"
+              className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-[#f9fff9] z-50 shadow-2xl flex flex-col lg:hidden pt-28"
             >
+              <div className="px-6 mb-8">
+                <Image src="/padalkar logo.png" alt="Logo" width={60} height={60} className="rounded-full bg-white shadow-md p-1" />
+                <p className="text-primary font-bold mt-2">पडळकर दूध संकलन केंद्र</p>
+              </div>
+
               <nav className="flex flex-col px-6">
                 {links.map((item, idx) => (
                   <motion.a 
@@ -104,18 +109,23 @@ export default function Navbar() {
                     key={idx} 
                     href={item.href} 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="font-bold text-xl text-primary py-4 border-b border-gray-100 hover:text-secondary flex items-center justify-between group"
+                    className="font-bold text-xl text-primary py-4 border-b border-primary/10 hover:text-secondary flex items-center justify-between group"
                   >
                     <span>{item.name}</span>
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    <span className="text-secondary opacity-0 group-hover:opacity-100 transition-all">→</span>
                   </motion.a>
                 ))}
               </nav>
               
-              <div className="mt-auto p-8 bg-gray-50">
-                <p className="text-sm text-gray-500 font-semibold mb-2">संपर्क करा:</p>
-                <p className="text-primary font-bold">9356980450</p>
-                <p className="text-gray-400 text-xs mt-4">पडळकर दूध संकलन केंद्र</p>
+              <div className="mt-auto p-8 bg-primary/5 border-t border-primary/10">
+                <p className="text-sm text-gray-500 font-semibold mb-2 flex items-center gap-2">
+                  <span>📞</span> संपर्क करा:
+                </p>
+                <p className="text-primary font-bold text-lg">9356980450</p>
+                <div className="mt-4 flex gap-3">
+                   <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs">FB</div>
+                   <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs">IG</div>
+                </div>
               </div>
             </motion.div>
           </>

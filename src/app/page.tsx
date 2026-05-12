@@ -128,7 +128,7 @@ export default function Home() {
               </div>
 
               {/* Quote Content */}
-              <div className="relative z-10 text-center space-y-4 px-2 py-10 sm:py-0">
+              <div className="relative z-10 text-center space-y-4 px-4 pt-24 pb-12 sm:py-0">
                 <p className="m-0 font-bold text-2xl sm:text-3xl md:text-5xl text-secondary drop-shadow-lg leading-tight">
                   "शुद्ध दूध, सुदृढ आरोग्य!"
                 </p>
