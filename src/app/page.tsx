@@ -114,22 +114,22 @@ export default function Home() {
 
           {/* Bottom Quote Box */}
           <motion.div {...fadeInView} className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-primary to-[#0a260a] p-8 md:p-12 rounded-3xl shadow-2xl text-white transform hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden flex flex-col items-center justify-center min-h-[250px]">
+            <div className="bg-gradient-to-r from-primary to-[#0a260a] p-8 md:p-12 rounded-3xl shadow-2xl text-white transform hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden flex flex-col items-center justify-center min-h-[320px] md:min-h-[250px]">
               {/* Background Blur Effects */}
               <div className="absolute -right-10 -top-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
               <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
               
               {/* Corner Logos */}
-              <div className="absolute top-2 left-2 sm:top-4 sm:left-4 md:top-6 md:left-6 z-20">
-                <Image src="/padalkar_logo-removebg-preview.png" alt="Logo Left" width={80} height={80} className="object-contain drop-shadow-md w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
+              <div className="absolute top-4 left-4 md:top-6 md:left-6 z-20">
+                <Image src="/padalkar_logo-removebg-preview.png" alt="Logo Left" width={80} height={80} className="object-contain drop-shadow-md w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20" />
               </div>
-              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 md:top-6 md:right-6 z-20">
-                <Image src="/padalkar_logo-removebg-preview.png" alt="Logo Right" width={80} height={80} className="object-contain drop-shadow-md w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" />
+              <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20">
+                <Image src="/padalkar_logo-removebg-preview.png" alt="Logo Right" width={80} height={80} className="object-contain drop-shadow-md w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20" />
               </div>
 
               {/* Quote Content */}
-              <div className="relative z-10 text-center space-y-4 px-4 pt-24 pb-12 sm:py-0">
-                <p className="m-0 font-bold text-2xl sm:text-3xl md:text-5xl text-secondary drop-shadow-lg leading-tight">
+              <div className="relative z-10 text-center space-y-4 px-4 pt-28 sm:pt-0">
+                <p className="m-0 font-bold text-2xl sm:text-3xl md:text-5xl text-secondary drop-shadow-lg leading-tight mt-8 sm:mt-0">
                   "शुद्ध दूध, सुदृढ आरोग्य!"
                 </p>
                 <div className="w-16 h-1 bg-white/30 mx-auto rounded-full mt-4 sm:mt-6 mb-4 sm:mb-6"></div>
