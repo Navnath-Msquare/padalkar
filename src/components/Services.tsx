@@ -32,18 +32,18 @@ export default function Services() {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {servicesData.map((service) => (
           <div 
             key={service.id}
-            className="bg-white/90 backdrop-blur-md p-10 text-center rounded-2xl border border-primary/10 shadow-[0_8px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col items-center"
+            className="bg-white/90 backdrop-blur-md p-6 sm:p-8 md:p-10 text-center rounded-2xl border border-primary/10 shadow-[0_8px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group flex flex-col items-center"
           >
-            <span className="text-6xl block mb-6 transition-transform duration-300 group-hover:scale-110 drop-shadow-sm">{service.icon}</span>
-            <h3 className="text-2xl font-bold text-primary mb-4">{service.title}</h3>
-            <p className="text-gray-600 mb-6 flex-grow">{service.shortDesc}</p>
+            <span className="text-5xl md:text-6xl block mb-4 md:mb-6 transition-transform duration-300 group-hover:scale-110 drop-shadow-sm">{service.icon}</span>
+            <h3 className="text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">{service.title}</h3>
+            <p className="text-gray-600 mb-5 md:mb-6 flex-grow text-sm md:text-base">{service.shortDesc}</p>
             <button 
               onClick={() => setSelectedService(service)}
-              className="mt-auto px-6 py-2 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors duration-300 w-full"
+              className="mt-auto px-6 py-2 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors duration-300 w-full text-sm md:text-base"
             >
               Read More
             </button>
@@ -66,32 +66,33 @@ export default function Services() {
               exit={{ scale: 0.9, y: 30, opacity: 0 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-3xl p-8 md:p-12 max-w-2xl w-full shadow-2xl relative overflow-hidden"
+              className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 max-w-2xl w-full shadow-2xl relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-3 bg-secondary"></div>
+              <div className="absolute top-0 left-0 w-full h-2 sm:h-3 bg-secondary"></div>
               <button 
                 onClick={() => setSelectedService(null)}
-                className="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors"
+                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 rounded-full p-2"
+                aria-label="Close"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
               
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
-                <div className="text-7xl bg-[#f9fff9] p-6 rounded-2xl border border-primary/10 shadow-inner">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left mt-4 sm:mt-0">
+                <div className="text-5xl sm:text-7xl bg-[#f9fff9] p-4 sm:p-6 rounded-2xl border border-primary/10 shadow-inner flex-shrink-0">
                   {selectedService.icon}
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-primary mb-4">{selectedService.title}</h3>
-                  <p className="text-gray-700 leading-relaxed text-lg">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-3 sm:mb-4">{selectedService.title}</h3>
+                  <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
                     {selectedService.fullDesc}
                   </p>
                 </div>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-gray-100 flex justify-center md:justify-end">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-100 flex justify-center sm:justify-end">
                 <button 
                   onClick={() => setSelectedService(null)}
-                  className="px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-[#0a260a] transition-colors shadow-md"
+                  className="px-6 py-2 sm:px-8 sm:py-3 bg-primary text-white font-bold rounded-full hover:bg-[#0a260a] transition-colors shadow-md w-full sm:w-auto text-sm sm:text-base"
                 >
                   बंद करा (Close)
                 </button>

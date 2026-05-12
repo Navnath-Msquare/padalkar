@@ -41,17 +41,21 @@ export default function HeroSlider() {
             }`}
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70 z-10"></div>
           </div>
         ))}
       </div>
       
-      <div className="relative z-20 text-center text-white px-5 animate-fade-in-up">
-        <h1 className="text-4xl md:text-6xl font-bold mb-5 drop-shadow-lg">{slides[current].title}</h1>
-        <p className="text-xl md:text-2xl mb-8 opacity-90">{slides[current].subtitle}</p>
+      <div className="relative z-20 text-center text-white px-4 w-full max-w-5xl mx-auto animate-fade-in-up">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 drop-shadow-xl leading-tight">
+          {slides[current].title}
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 sm:mb-10 opacity-90 drop-shadow-md">
+          {slides[current].subtitle}
+        </p>
         <a 
           href="#contact" 
-          className="inline-block px-8 py-4 bg-secondary text-bg-dark font-bold rounded-full transition-transform duration-300 hover:scale-105 hover:bg-accent shadow-[0_5px_20px_rgba(249,217,73,0.4)]"
+          className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-secondary text-bg-dark font-bold rounded-full transition-transform duration-300 hover:scale-105 hover:bg-accent shadow-[0_5px_20px_rgba(249,217,73,0.4)] text-sm sm:text-base"
         >
           आमच्याशी संपर्क साधा
         </a>
